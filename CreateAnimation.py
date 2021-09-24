@@ -9,6 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pathlib
 import os
+import argparse
 
 
 def hermiteCurve(P1,P2,TT,tg1,tg2):
@@ -449,14 +450,20 @@ def plotSignal(signal, marker,axis2Print,step=2,capV='Deslocamento',capH='Númer
     plt.close()
     
     
-###################  Parametros iniciais  #####################################################################################################################
+###################  Parâmetros iniciais  #####################################################################################################################
 
 path =        os.getcwd() + '/dados/'    # Caminho do diretório raiz dos dados
 sentences =   path + 'dadosEntrada/sentencas.txt'                       # Sentenças e anotações dos tempos (dados de entrada)
 rules =       path + 'bancoRegras/regras.txt'                           # Banco de regras
 expressions = path + 'repositorioExpressoes/'                           # Repositório de expressões faciais
 
-sentenceIndex = 1                                                       # Índice da sentença no arquivo de sentenças
+
+# índice da sentença obtido por parâmetro na execução.
+# Exemplo de execução para a sentença 0: 
+#    python CreateAnimation.py -sentenca 0
+parser = argparse.ArgumentParser(description='Teste arg')
+parser.add_argument('-sentenca', "-i",required=True, help= "Índice da sentença no arquivo sentencas.txt")
+sentenceIndex = int(parser.parse_args().sentenca)                       # Índice da sentença no arquivo de sentenças
 
 
 ###################   Execução   ##############################################################################################################################
@@ -473,24 +480,19 @@ anim = makeAnimation(signFrames, FEAnimations)
 
 ################### Representação gráfica  ####################################################################################################################
 
-# print('\n---------- Representação gráfica ---------------------------------------')
 fLabels = open(expressions + 'labels.lbl','r')
 labels = (str(fLabels.readlines()[0])).split(",")
 fLabels.close()
 animRange = [0,-1] # padrão [0,-1]
 
-
 axis2Print = [True, False, False] # Quais eixos devem ser mostrados [ X, Y, Z]
-for i in range(10,11):
-    marker2Print = i
-    plotSignal(anim[animRange[0]:animRange[1]],marker2Print,axis2Print,step=50, title ='Marcador: %s (%d)'%(labels[i],i))
+marker2Print = 10
+plotSignal(anim[animRange[0]:animRange[1]],marker2Print,axis2Print,step=50, title ='Marcador: %s (%d)'%(labels[marker2Print],marker2Print))
 
 
 ###################  Gravação da animação   ###################################################################################################################
 
-np.save(path+'animacoesProntas/EF'+str(sentenceIndex),anim)
-print('\nArquivo de animação salvo com sucesso!')
-print('   Caminho do arquivo:',path+'animacoesProntas/')
-print('   Nome do arquivo: EF'+str(sentenceIndex) +'.npy')
-# print(path+'animacoesProntas/EF'+str(sentenceIndex))
-
+# np.save(path+'animacoesProntas/EF'+str(sentenceIndex),anim)
+# print('\nArquivo de animação salvo com sucesso!')
+# print('   Caminho do arquivo:',path+'animacoesProntas/')
+# print('   Nome do arquivo: EF'+str(sentenceIndex) +'.npy')
