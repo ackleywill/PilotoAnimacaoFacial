@@ -1,11 +1,15 @@
-# Sistema Piloto: Animação Facial
+# Animação Facial
 
-O sistema piloto de animação facial aqui apresentado, faz parte do trabalho da tese de doutorado _Modelagem e síntese de aspectos faciais da Língua Brasileira de Sinais para avatares sinalizantes_ desenvolvido por Ackley Dias Will e orientado pelo prof. Dr. José Mario de Martino da Faculdade de Engenharia Elétrica e de Computação (FEEC) da Universidade Estadual de Campinas (UNICAMP). O sistema tem como objetivo validar a metodologia de criação de animações faciais para acompanhar as animações corporais apresentada no trabalho da tese.
-Este texto descreve os arquivos, configurações e parâmetros que envolvem a execução do sistema piloto. O sistema foi escrito na linguagem de programação Python. 
-O arquivo CreateAnimation.py apresenta os códigos do sistema. Caso necessário, os parâmetros envolvendo os caminhos dos arquivos de sentenças e regras e caminho do repositório podem ser alterados na seção do código demarcada como Parâmetros iniciais. Os códigos foram comentados para melhor entendimento das funcionalidades.
+O trabalho deste repositório, faz parte da tese de doutorado _Modelagem e síntese de aspectos faciais da Língua Brasileira de Sinais para avatares sinalizantes_ desenvolvido por Ackley Dias Will e orientado pelo prof. Dr. José Mario de Martino da Faculdade de Engenharia Elétrica e de Computação (FEEC) da Universidade Estadual de Campinas (UNICAMP). O sistema tem como objetivo validar a metodologia de criação de animações faciais para acompanhar as animações corporais apresentada no trabalho da tese.
 
 
-## Arquivos de parâmetros do sistema
+
+# 1. Sistema Piloto
+
+O sistema piloto aqui descrito foi escrito na linguagem de programação Python. O arquivo CreateAnimation.py apresenta os códigos do sistema. Caso necessário, os parâmetros envolvendo os caminhos dos arquivos de sentenças e regras e caminho do repositório podem ser alterados na seção do código demarcada como _Parâmetros iniciais_. Os códigos foram comentados para melhor entendimento das funcionalidades. A seguir sao apresentados os arquivos, configurações e parâmetros que envolvem a execução do sistema piloto.
+
+
+## 1.1.  Arquivos de parâmetros do sistema
 
 Como parâmetro do sistema são exigidos: o arquivo de sentenças e anotações, o arquivo de regras e o caminho do repositório das expressões faciais. 
 
@@ -35,7 +39,7 @@ _**Repositório de expressões faciais**_
 Os trechos de animações de expressões faciais são salvos em arquivos independentes em um diretório que representa o repositório de expressões faciais. O nome de cada arquivo é composto pelo tipo da expressão facial seguido por um número inteiro sequencial. Os diferentes tipos de expressões faciais utilizados neste trabalho são representados pelas letras: A, B, C e D.
 
 
-## Pré-requisitos
+## 1.2. Pré-requisitos
 
 Para a execução do sistema piloto é necessário ter o software Python instalado. O arquivo de instalação pode ser obtido através do endereço: https://www.python.org/downloads/. É importante também adicionar o Python à configuração de PATH do sistema operacional. No Windows essa configuração pode ser realizada automaticamente selecionando a opção  “add Python to PATH” no início da instalação do Python.
 
@@ -43,7 +47,7 @@ Para a execução também é necessário a instalação de alguns módulos utili
 pip install -r requirements.txt
 
 
-## Execução
+## 1.3. Execução
 
 Após a instalação do Python e dos pacotes necessários o sistema piloto pode ser executado pelo prompt de comando. Na execução deve ser passado como parâmetro o índice da sentença no arquivo sentenças.txt. O exemplo abaixo apresenta a execução do sistema utilizando a sentença de índice 0 (zero).
 
@@ -60,16 +64,16 @@ marker2Print = 10_
 O marcador a ser exibido pode ser escolhido através da alteração da variável “marker2Print” com um valor entre 0 e 38. É possível também escolher o(s) eixo(s) a ser(em) exibido(s) através da alteração dos valores da lista “axis2Print”. Essa lista contém 3 valores boleanos indicando a execução dos eixos x, y e z respectivamente. O valor True indica o eixo que deve ser exibido e o valor False o eixo que não deve ser exibido.
 
 
-# Execução da animação facial pelo avatar
+# 2. Execução da animação facial pelo avatar
 
 No texto abaixo serão apresentados os procedimentos para a execução, pelo avatar sinalizante, das animações faciais produzidas pelo sistema piloto. As animações faciais acompanham as animações corporais já inseridas no avatar sinalizante. Dessa forma, são disponibilizados arquivos criados no software Blender, do avatar já com as animações corporais para a execução dos procedimentos aqui apresentados. 
 
-## Pré-requisitos
+## 2.1. Pré-requisitos
 Para a execução das animações é necessário ter instalado o software Blender que pode ser obtido pelo endereço: \hypertarget{https://www.blender.org/}{https://www.blender.org/}. 
 Os experimentos aqui apresentados foram realizados na versão do Blender 2.93.4.
 
 
-## Execução
+## 2.2. Execução
 
 Os arquivos de animação do Blender, estão salvos de forma compactada (no formato rar) no repositório do gitHub e devem ser descompactados no diretório rais do sistema piloto. Após descompactado, ao abrir o arquivo do avatar com a animação corporal no Blender é exibido, na aba _Scripting_, o avatar no painel à esquerda e o script responsável pela incorporação da animação facial no painel à direita. Abaixo do painel do avatar se encontra o painel de linha de tempo, que permite a execução da animação.
 
