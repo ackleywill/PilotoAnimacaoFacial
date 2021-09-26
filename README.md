@@ -69,7 +69,7 @@ O marcador a ser exibido pode ser escolhido através da alteração da variável
 No texto abaixo serão apresentados os procedimentos para a execução, pelo avatar sinalizante, das animações faciais produzidas pelo sistema piloto. As animações faciais acompanham as animações corporais já inseridas no avatar sinalizante. Dessa forma, são disponibilizados arquivos criados no software Blender, do avatar já com as animações corporais para a execução dos procedimentos aqui apresentados. 
 
 ## 2.1. Pré-requisitos
-Para a execução das animações é necessário ter instalado o software Blender que pode ser obtido pelo endereço: \hypertarget{https://www.blender.org/}{https://www.blender.org/}. 
+Para a execução das animações é necessário ter instalado o software Blender que pode ser obtido pelo endereço: https://www.blender.org/. 
 Os experimentos aqui apresentados foram realizados na versão do Blender 2.93.4.
 
 
