@@ -77,7 +77,7 @@ Os experimentos aqui apresentados foram realizados na versão do Blender 2.93.4.
 
 Os arquivos de animação do Blender, estão salvos de forma compactada (no formato rar) no repositório do gitHub e devem ser descompactados no diretório rais do sistema piloto. Após descompactado, ao abrir o arquivo do avatar com a animação corporal no Blender é exibido, na aba _Scripting_, o avatar no painel à esquerda e o script responsável pela incorporação da animação facial no painel à direita. Abaixo do painel do avatar se encontra o painel de linha de tempo, que permite a execução da animação.
 
-No script, a variável _sentence_ indica o nome do arquivo (sem sua extensão) que contém os dados da animação facial a ser incorporada. Na variável _dispPath_ é armazenado o caminho do arquivo de animação. Por padrão está definido o caminho _/dados/animacoesProntas/_ partindo do diretório padrão do sistema piloto. Essa variável pode ser alterada indicando um caminho diferente caso seja necessário.
+No script, a variável _sentence_ indica o nome do arquivo (sem sua extensão) que contém os dados da animação facial, criada pelo sistema piloto, a ser incorporada ao avatar. Na variável _dispPath_ é armazenado o caminho do arquivo de animação. Essa variável deve ser alterada de acordo com o local em que foi salvo o arquivo.
 
 A execução do script é realizada através do atalho _Alt+P_ ou por um clique no botão marcado _run script_ na parte superior do painel de script. Após a execução é possível verificar as animações arrastando o cursor na barra do painel da linha de tempo ou clicando no botão de _play Animation_. 
 
