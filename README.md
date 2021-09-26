@@ -18,20 +18,26 @@ _**Arquivo: sentenças.txt**_
 
 O arquivo sentencas.txt contém as sentenças em glosas e a descrição dos instantes de início de cada transição e sinal sinalizado assim como o instante de término da animação corporal. Abaixo está listado o conteúdo do arquivo com duas sentenças e suas anotações:
 
-_CASAS HOMEM EL@ VENDER VAI?
-T360,S440,T535,S573,T620,S643,T691,S726,T766,S815,T914,E1023
-HOMEM CONSTRUIR CASAS COMO?
-T488,S540,T593,S630,T695,S740,T805,S835,T948,E1038_
+_CASAS HOMEM EL@ VENDER VAI?_
+
+_T360,S440,T535,S573,T620,S643,T691,S726,T766,S815,T914,E1023_
+
+_HOMEM CONSTRUIR CASAS COMO?_
+
+_T488,S540,T593,S630,T695,S740,T805,S835,T948,E1038_
 
 
 _**Arquivo:  regras.txt**_
 
 Neste arquivo são descritas as regras associadas aos sinais da Libras. Em cada linha é apresentado o sinal e sua regra associada. Abaixo está listado um trecho do conteúdo do arquivo regras.txt:
 
-_ONDE? B1
-QUANDO? B1
-COMO? B1A1
-POR-QUE? B1A1_
+_ONDE? B1_
+
+_QUANDO? B1_
+
+_COMO? B1A1_
+
+_POR-QUE? B1A1_
 
 
 _**Repositório de expressões faciais**_
@@ -58,8 +64,9 @@ O sistema irá gerar o arquivo da animação facial para ser executado pelo avat
 Relatório e gráfico da execução
 Durante a execução do programa é exibido um relatório textual com informações sobre a execução do sistema e ao final um gráfico com o deslocamento do eixo X de um marcador da sobrancelha ao longo dos quadros de animação. Tanto o marcador quanto o eixo podem ser alterados na Seção denominada “Representação gráfica” no código. O trecho de código abaixo indica que será exibido o eixo X do marcador de índice 10.
 
-_axis2Print = [True, False, False]
-marker2Print = 10_
+_axis2Print = [True, False, False]_
+
+_marker2Print = 10_
 
 O marcador a ser exibido pode ser escolhido através da alteração da variável “marker2Print” com um valor entre 0 e 38. É possível também escolher o(s) eixo(s) a ser(em) exibido(s) através da alteração dos valores da lista “axis2Print”. Essa lista contém 3 valores boleanos indicando a execução dos eixos x, y e z respectivamente. O valor True indica o eixo que deve ser exibido e o valor False o eixo que não deve ser exibido.
 
