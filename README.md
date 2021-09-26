@@ -1,6 +1,6 @@
 # Animação Facial
 
-O trabalho deste repositório, faz parte da tese de doutorado _Modelagem e síntese de aspectos faciais da Língua Brasileira de Sinais para avatares sinalizantes_ desenvolvido por Ackley Dias Will e orientado pelo prof. Dr. José Mario de Martino da Faculdade de Engenharia Elétrica e de Computação (FEEC) da Universidade Estadual de Campinas (UNICAMP). O sistema tem como objetivo validar a metodologia de criação de animações faciais para acompanhar as animações corporais apresentada no trabalho da tese.
+O trabalho deste repositório, faz parte da tese de doutorado _Modelagem e síntese de aspectos faciais da Língua Brasileira de Sinais para avatares sinalizantes_ desenvolvido por Ackley Dias Will e orientado pelo prof. Dr. José Mario De Martino da Faculdade de Engenharia Elétrica e de Computação (FEEC) da Universidade Estadual de Campinas (UNICAMP). O sistema tem como objetivo validar a metodologia de criação de animações faciais para acompanhar as animações corporais apresentada no trabalho da tese.
 
 
 
